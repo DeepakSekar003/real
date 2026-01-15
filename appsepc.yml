@@ -5,6 +5,13 @@ files:
   - source: /
     destination: /home/ubuntu/app
 
+permissions:
+  - object: /home/ubuntu/app/scripts
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
+
 hooks:
   BeforeInstall:
     - location: scripts/before_install.sh
