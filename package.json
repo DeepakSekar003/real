@@ -1,0 +1,13 @@
+{
+  "name": "real-todo-app",
+  "version": "1.0.0",
+  "description": "Real Todo application for DevOps CI/CD practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
