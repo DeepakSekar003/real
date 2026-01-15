@@ -1,4 +1,15 @@
 #!/bin/bash
-pm2 delete all || true
+echo "ApplicationStart started"
+
 cd /home/ubuntu/app
-pm2 start index.js --name real-todo
+
+# stop app if already running
+pm2 stop todo-app || true
+pm2 delete todo-app || true
+
+# start app
+pm2 start index.js --name todo-app
+
+pm2 save
+
+echo "ApplicationStart completed"
