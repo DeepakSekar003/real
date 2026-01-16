@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: DeepakSekar003-real-9d7763d
+  - source: /
     destination: /home/ubuntu/app
 
 permissions:
