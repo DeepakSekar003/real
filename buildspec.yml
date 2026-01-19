@@ -5,10 +5,10 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo Installing dependencies
-      - npm install
+      - echo "Build phase – no npm install"
 
 artifacts:
   files:
     - '**/*'
-
+  exclude-paths:
+    - node_modules/**   # 🔥 THIS IS THE KEY
