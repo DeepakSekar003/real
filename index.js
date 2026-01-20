@@ -33,6 +33,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "OK" });
 });
 
-app.listen(3000, () => {
-  console.log("Real Todo App running on port 3000");
+app.listen(3000, '0.0.0.0', () => {
+  console.log("Server running on port 3000");
 });
+
