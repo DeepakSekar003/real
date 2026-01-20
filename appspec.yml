@@ -4,9 +4,14 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/app
+    overwrite: yes
 
 hooks:
   AfterInstall:
+    - location: scripts/fix_permissions.sh
+      timeout: 300
+      runas: root
+
     - location: scripts/install.sh
       timeout: 300
       runas: ubuntu
